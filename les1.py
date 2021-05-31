@@ -62,7 +62,7 @@ class CategoriesParser(Parse5ka):
     def run(self):
         for category in self._get_gategories():
             category["products"] = []
-            params = f"?catrgories={category['parent_group_code']}"
+            params = f"?categories={category['parent_group_code']}"
             url = f"{self.start_url}{params}"
 
             category["products"].extend(list(self._parse(url)))
